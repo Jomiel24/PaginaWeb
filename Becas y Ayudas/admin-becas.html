@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Administración de Becas - ULEAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portal de Administración de Becas</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="admin-becas.html">Solicitudes de Becas</a></li>
+            <li><a href="reportes.html">Generar Reportes</a></li>
+            <li><a href="evaluaciones.html">Evaluaciones</a></li>
+            <li><a href="logout.html">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Solicitudes Pendientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Solicitud</th>
+                    <th>Nombre Estudiante</th>
+                    <th>Email</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="solicitudesTable">
+                <tr>
+                    <td>00123</td>
+                    <td>Juan Pérez</td>
+                    <td>juan.perez@email.com</td>
+                    <td>Pendiente</td>
+                    <td>
+                        <button onclick="reviewSolicitud(123)">Revisar</button>
+                        <button onclick="approveSolicitud(123)">Aprobar</button>
+                        <button onclick="rejectSolicitud(123)">Rechazar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>00124</td>
+                    <td>María Gómez</td>
+                    <td>maria.gomez@email.com</td>
+                    <td>Pendiente</td>
+                    <td>
+                        <button onclick="reviewSolicitud(124)">Revisar</button>
+                        <button onclick="approveSolicitud(124)">Aprobar</button>
+                        <button onclick="rejectSolicitud(124)">Rechazar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
